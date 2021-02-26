@@ -1,0 +1,13 @@
+:root {
+    --primary: blue;
+    --secondary: purple;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--primary);
+}
