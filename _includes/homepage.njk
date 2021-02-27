@@ -1,0 +1,114 @@
+---
+title: Home page
+lang: en
+languageButton: Select a language
+---
+{% include 'head.njk' %}
+{% include 'header.njk' %}
+  <main>
+    <div class="columns">
+      <div class="column is-11 is-offset-1">
+      <section class="hero">
+        <div class="hero-body">
+          <h1 class="title">{{ title }}</h1>
+          <p class="subtitle">
+            Hero subtitle
+          </p>
+          {% include 'searchform.njk' %}
+        </div>
+      </section>
+      </div>
+    </div>
+    
+    <section class="section">
+      <div class="columns">
+        <div class="column is-10 is-offset-1">
+          <h2 class="title">Popular articles</h2>
+          
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="title"><a href="#article">Article title</a></h3>
+                  <div class="content">
+                    <p>Part of a description of the article</p>
+                    <a href="#article">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="title"><a href="#article">Article title</a></h3>
+                  <div class="content">
+                    <p>Part of a description of the article</p>
+                    <a href="#article">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="title"><a href="#article">Article title</a></h3>
+                  <div class="content">
+                    <p>Part of a description of the article</p>
+                    <a href="#article">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="columns">
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="title"><a href="#article">Article title</a></h3>
+                  <div class="content">
+                    <p>Part of a description of the article</p>
+                    <a href="#article">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="title"><a href="#article">Article title</a></h3>
+                  <div class="content">
+                    <p>Part of a description of the article</p>
+                    <a href="#article">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="title"><a href="#article">Article title</a></h3>
+                  <div class="content">
+                    <p>Part of a description of the article</p>
+                    <a href="#article">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+          </div>
+
+
+    </section>
+    
+  </main>
+{% include 'footer.njk' %}
+  <script>
+    document.querySelector('form#search').addEventListener('submit', (e) => {
+      e.preventDefault();
+    });
+  </script>
+  </body>
+</html>

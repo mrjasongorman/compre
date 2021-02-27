@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Homepage
+title: Help Centre
 ---
 
 Example home page.
