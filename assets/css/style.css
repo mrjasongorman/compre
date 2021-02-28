@@ -1,13 +1,246 @@
-:root {
-    --primary: blue;
-    --secondary: purple;
+/** RESET **/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+    line-height: 1.3;
 }
 
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-    /* margin: 0; */
-    color: var(--primary);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+    filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Vars */
+:root {
+    --base-size: 1rem;
+    --size-300: calc( var(--base-size) * 0.8 );
+    --size-400: var(--base-size);
+    --size-500: calc( var(--base-size) * 1.33 );
+    --size-600: calc( var(--base-size) * 1.77 );
+    --size-700: calc( var(--base-size) * 2.36 );
+    --size-800: calc( var(--base-size) * 3.15 );
+    --size-900: calc( var(--base-size) * 4.2 );
+
+    --primary: #231651;
+    --secondary: #ff8484;
+    --secondary-shade: #ff5151;
+    --tertiary: #2c988c;
+    --tertiary-glare: #d6fff6;
+    --light: #fafafa;
+    --light-shade: #eeeeee;
+    --grey: #c4c4c4;
+    --darkgrey: #252525;
+
+    --border-radius: 0.5rem;
+}
+
+
+/* Global CSS starts */
+body {
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: var(--size-600);
+
+  font-weight: medium;
+  
+  background: var(--light);
+  color: var(--darkgrey);
+  line-height: 1.5;
+  font-family: Georgia, serif;
+  padding: 2rem 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--size-700);
+}
+
+h2,
+h3 {
+  font-size: var(--size-600);
+}
+
+a {
+  color: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+
+/* Utils */
+
+.flow > * + * {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.splitter > :last-child {
+    margin-top: var(--size-500);
+}
+
+@media(min-width: 48em) {
+    .splitter {
+        display: flex;
+    }
+
+    .splitter > * {
+        flex-grow: 1;
+    }
+
+    .splitter > :last-child {
+        margin-top: 0;
+        margin-left: var(--size-500);
+        min-width: 22rem;
+    }
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.wrapper {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 var(--size-500);
+}
+
+.radius {
+    border-radius: var(--border-radius);
+}
+
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+    grid-gap: 1rem;
+}
+
+
+.button {
+    border-radius: var(--border-radius);
+  
+    font: inherit;
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: white;
+    padding: 0.6rem 1.5rem;
+    position: relative;
+    
+    font-weight: bold;
+}
+
+.button[data-variant='ghost'] {
+    border-color: currentColor;
+    background: transparent;
+}
+  
+.button:focus {
+    outline-offset: -0.4rem;
+    outline: 1px solid;
+}
+  
+.button:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--light);
+}
+  
+.button:active {
+    transform: scale(0.95);
 }
