@@ -1,10 +1,10 @@
 ---
 layout: article
-title: Terms of Service
+title: What are your Terms of Service?
 topic: 
     - something
     - popular
 lang: en
 ---
 
-This is an article
+Our terms of service can be found here on our website.
