@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Help Centre
+title: Welcome to the Help Centre
 ---
 
-Example home page.
+Get help with your account, and more.
