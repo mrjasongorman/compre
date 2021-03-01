@@ -32,82 +32,71 @@ languageButton: Select a language
           
           {% for item in collections.all %}
             {% if item.url.indexOf("article/") !== -1 %}
-              <div class="card">
-              <div class="card-content">
+            <div class="card">
+              <div class="flow">
                 <h3 class="title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                <div class="content">
-                  {{ item.data.content | safe }}
-                  <a href="{{ item.url }}">Read more <span class="visually-hidden">about {{ item.title }}</span></a>
-                </div>
+                {{ item.data.content | safe }}
+                <a href="{{ item.url }}">Read more <span class="visually-hidden">about {{ item.title }}</span></a>
               </div>
-              </div>
+            </div>
             {% endif %}
             
 
           {% endfor %}
 
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
+          
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
+          
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
+          
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
+          
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
+          
           <div class="card">
-            <div class="card-content">
+            <div class="flow">
               <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
+              <p>Part of a description of the article</p>
+              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
             </div>
           </div>
           
