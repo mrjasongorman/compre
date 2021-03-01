@@ -19,7 +19,7 @@
   --grey: #c4c4c4;
   --darkgrey: #222222;
 
-  --border-radius: 0.5rem;
+  --border-radius: 0.3rem;
 }
 
 
@@ -135,6 +135,7 @@ h1 {
 h2,
 h3 {
   font-size: var(--size-500);
+  margin-bottom: var(--size-500);
 }
 
 a {
@@ -151,7 +152,7 @@ th {
 
 :focus {
   outline: 2px dotted;
-  outline-offset: 0.25rem;
+  outline-offset: 0.2rem;
 }
 
 button:hover {
@@ -236,7 +237,7 @@ button:hover {
 .auto-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
-    grid-gap: 1rem;
+    grid-gap: 2rem 1rem;
 }
 
 
@@ -247,10 +248,10 @@ button:hover {
     display: inline-block;
     line-height: 1;
     text-decoration: none;
-    border: 1px solid var(--primary);
-    background: var(--primary);
-    color: white;
-    padding: 0.6rem 1.5rem;
+    /* border: 1px solid var(--primary); */
+    background-color: #bfbfbf;
+    color: var(--darkgrey);
+    padding: 0.8rem 1.5rem;
     position: relative;
     
     font-weight: bold;
@@ -264,12 +265,11 @@ button:hover {
 .button:focus {
     outline-offset: -0.4rem;
     outline: 1px solid;
+    background-color: #989898;
 }
   
 .button:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: var(--light);
+    background-color: #989898;
 }
   
 .button:active {
@@ -284,23 +284,24 @@ button:hover {
 
 /* BLOCK */
 .hero {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-
-.hero {}
-
 
 .card {
   background-color: white;
-  border: 1px solid var(--grey);
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0px 5px 10px var(--grey);
 }
 
 .card a {
   display: inline-block;
+}
+
+.card .card_link::after {
+  content: '>';
+}
+
+.header {
+  border-bottom: 2px solid var(--grey);
 }
 
 
