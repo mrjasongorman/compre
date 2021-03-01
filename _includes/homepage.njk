@@ -10,9 +10,7 @@ languageButton: Select a language
     <section class="wrapper">
       <div class="hero flow">
         <h1 class="title">{{ title }}</h1>
-        <p class="subtitle">
-          Hero subtitle
-        </p>
+        {{ content | safe }}
         
         <form id="search">
           <div class="searchbox" data-state="large">
@@ -36,74 +34,18 @@ languageButton: Select a language
               <div class="flow">
                 <h3 class="title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
                 {{ item.data.content | safe }}
-                <a href="{{ item.url }}">Read more <span class="visually-hidden">about {{ item.title }}</span></a>
+                <a class="card_link" href="{{ item.url }}">Read more <span class="visually-hidden">about {{ item.title }}</span></a>
               </div>
             </div>
             {% endif %}
             
 
           {% endfor %}
-
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="flow">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <p>Part of a description of the article</p>
-              <a href="#article">Read more <span class="visually-hidden">about article title</span></a>
-            </div>
-          </div>
           
         </div>
 
         <div class="">
-          <a href="/articles/">View all articles</a>
+          <a class="button" href="/articles/">View all articles</a>
         </div>
       </div>
     </section>

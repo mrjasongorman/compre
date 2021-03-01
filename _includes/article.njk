@@ -3,11 +3,12 @@ title: Help and support
 lang: en
 ---
 {% include 'head.njk' %}
+{% include 'header.njk' %}
   <main>  
-    <article>
+    <article class="wrapper">
       <h1>{{ title }}</h1>
-      <time datetime="{{ page.date.toUTCString() }}">Valentines day</time>
-      {{ content }}
+      <time datetime="{{ page.date.toUTCString() }}">{{ page.date.toUTCString() }}</time>
+      {{ content | safe }}
     </article>
   </main>
 {% include 'footer.njk' %}
