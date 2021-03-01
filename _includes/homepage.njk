@@ -6,19 +6,23 @@ languageButton: Select a language
 {% include 'head.njk' %}
 {% include 'header.njk' %}
   <main>
-    <div class="columns">
-      <div class="column is-11 is-offset-1">
-      <section class="wrapper">
-        <div class="hero-body">
-          <h1 class="title">{{ title }}</h1>
-          <p class="subtitle">
-            Hero subtitle
-          </p>
-          {% include 'searchform.njk' %}
-        </div>
-      </section>
+    
+    <section class="wrapper">
+      <div class="hero flow">
+        <h1 class="title">{{ title }}</h1>
+        <p class="subtitle">
+          Hero subtitle
+        </p>
+        
+        <form id="search">
+          <div class="searchbox" data-state="large">
+              <input dir="ltr" type="text" placeholder="Search help articles" aria-label="Search help articles" spellcheck="false" autocomplete="off" />
+              <button type="submit">Search</button>
+          </div>
+        </form>
       </div>
-    </div>
+    </section>
+     
     
     <section class="section">
       <div class="wrapper">
@@ -27,7 +31,7 @@ languageButton: Select a language
         <div class="auto-grid">
           
           {% for item in collections.all %}
-            {% if item.url.indexOf("articles") !== -1 %}
+            {% if item.url.indexOf("article/") !== -1 %}
               <div class="card">
               <div class="card-content">
                 <h3 class="title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
@@ -106,17 +110,12 @@ languageButton: Select a language
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <h3 class="title"><a href="#article">Article title</a></h3>
-              <div class="content">
-                <p>Part of a description of the article</p>
-                <a href="#article">Read more</a>
-              </div>
-            </div>
-          </div>
+          
         </div>
 
+        <div class="">
+          <a href="/articles/">View all articles</a>
+        </div>
       </div>
     </section>
     
