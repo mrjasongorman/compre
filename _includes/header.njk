@@ -1,49 +1,33 @@
 <header role="banner" class="header">
-  <div class="wrapper">
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <a class="navbar-item" href="{{ config.mainWebsiteURL }}">
-    <img src="{{ config.basePath}}/assets/img/logo.png" width="133" height="51" alt="{{ config.mainWebsiteName }}">
-  </a>
-  
-  <a class="navbar-item" href="{{ config.baseURL }}"><strong>Help Centre</strong></a>
-  
-  {% include 'searchform.njk' %}
+  <div class="container">
+    <nav class="cluster" role="navigation" aria-label="main navigation" style="--justify: flex-start">
+      <ul role="list">
+        <li>
+          <a class="navbar-item" href="{{ config.mainWebsiteURL }}">
+            <img src="{{ config.basePath}}/assets/img/logo.png" width="133" height="51" alt="{{ config.mainWebsiteName }}">
+          </a>
+        </li>
+      
+        <li>
+          <a class="navbar-item" href="{{ config.baseURL }}"><strong>Help Centre</strong></a>
+        </li>
 
-  <a class="button" href="">
-    <strong>Contact</strong>
-  </a>
+        <li>
+        {% include 'searchform.njk' %}
+        </li>
 
-  <a class="button is-light" href="{{ config.basePath }}/lang/">
-    <strong>{{ languageButton }} ({{ lang }})</strong>
-  </a>
+        <li>
+          <a class="button" href="">
+            <strong>Contact</strong>
+          </a>
+        </li>
 
-</nav>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+        <li>
+          <a class="button is-light" href="{{ config.basePath }}/lang/">
+            <strong>{{ languageButton }} ({{ lang }})</strong>
+          </a>
+        </li>
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-
-});
-</script>    
+    </nav>
+  </div>  
 </header>
