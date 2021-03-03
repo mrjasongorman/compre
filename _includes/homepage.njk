@@ -7,44 +7,48 @@ languageButton: Select a language
 {% include 'header.njk' %}
   <main>
     
-    <section class="container">
-      <div class="cover" style="--minHeight: 40vh">
-        <div class="centered stack">
-          <h1 class="title">{{ title }}</h1>
-          {{ content | safe }}
-          
-          <form id="search">
-            <div class="searchbox" data-state="large">
-                <input dir="ltr" type="text" placeholder="Search help articles" aria-label="Search help articles" spellcheck="false" autocomplete="off" />
-                <button type="submit">Search</button>
-            </div>
-          </form>
+    <section class="hero">
+      <div class="container">
+        <div class="cover" style="--minHeight: 40vh">
+          <div class="centered stack">
+            <h1 class="title">{{ title }}</h1>
+            {{ content | safe }}
+            
+            <form id="search">
+              <div class="searchbox" data-state="large">
+                  <input dir="ltr" type="text" placeholder="Search help articles" aria-label="Search help articles" spellcheck="false" autocomplete="off" />
+                  <button type="submit">Search</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
      
     
-    <section class="container">
-      <h2 class="title">Popular articles</h2>
-        
-      <div class="grid">
-        
-        {% for item in collections.all %}
-          {% if item.url.indexOf("article/") !== -1 %}
-          <div class="card">
-            <div class="stack">
-              <h3 class="title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-              {{ item.data.content | safe }}
-              <a class="card_link" href="{{ item.url }}">Read more <span class="visually-hidden">about {{ item.title }}</span></a>
+    <section class="content">
+      <div class="container">
+        <h2 class="title">Popular articles</h2>
+          
+        <div class="grid">
+          
+          {% for item in collections.all %}
+            {% if item.url.indexOf("article/") !== -1 %}
+            <div class="card">
+              <div class="stack">
+                <h3 class="title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+                {{ item.data.content | safe }}
+                <a class="card_link" href="{{ item.url }}">Read more <span class="visually-hidden">about {{ item.title }}</span></a>
+              </div>
             </div>
+            {% endif %}
+          {% endfor %}
+
+          <div>
+            <a class="button" href="/articles/">View all articles</a>
           </div>
-          {% endif %}
-        {% endfor %}
 
-        <div>
-          <a class="button" href="/articles/">View all articles</a>
         </div>
-
       </div>
     </section>
     
