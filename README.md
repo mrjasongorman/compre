@@ -13,8 +13,8 @@ The focus of the project is to make it easy to fork and deploy your own help / F
 - [ ] Provide a fully functional FAQ website.
 - [x] Keep things as simple and secure as possible (static site generation).
 - [ ] Allow easy deployment via Self hosted infrastructure, Netlify, AWS, etc.
-- [ ] Accessible by default.
-- [ ] Works on as many devices as possible.
+- [x] Accessible by default.
+- [x] Works on as many devices as possible.
 - [ ] Focus on the content, people want to find answers to their questions asap.
 - [ ] Easily add content and make the site your own.
 
