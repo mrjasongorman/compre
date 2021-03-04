@@ -16,7 +16,7 @@ The focus of the project is to make it easy to fork and deploy your own help / F
 - [x] Accessible by default.
 - [x] Works on as many devices as possible.
 - [ ] Focus on the content, people want to find answers to their questions asap.
-- [ ] Easily add content and make the site your own.
+- [ ] Easily fork, add content and adjust colours / logo, to make the site your own.
 
 ### Approach
 
