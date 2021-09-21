@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/74be5255-a461-4be9-96cc-815eb8cf6600/deploy-status)](https://app.netlify.com/sites/compre/deploys) 
 
-[https://compre.netlify.app](https://compre.netlify.app)
+[https://compre.jasongorman.uk](https://compre.jasongorman.uk)
 
 # Compre
 Easy to setup FAQ / Help website.
